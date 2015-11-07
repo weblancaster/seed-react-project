@@ -1,13 +1,15 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var webpack = require('gulp-webpack');
+'use strict';
 
-var publicPath = './public';
-var buildPath = publicPath + '/build';
+let gulp = require('gulp');
+let sass = require('gulp-sass');
+let sourcemaps = require('gulp-sourcemaps');
+let webpack = require('gulp-webpack');
+
+let publicPath = './public';
+let buildPath = publicPath + '/build';
 
 gulp.task('sass:dev', function () {
-  var sassOptions = {
+  let sassOptions = {
     outputStyle: 'expanded',
     sourceComments: true
   };
@@ -20,7 +22,7 @@ gulp.task('sass:dev', function () {
 
 gulp.task('sass:prod', function () {
 
-  var sassOptions = {
+  let sassOptions = {
     outputStyle: 'compressed'
   };
 
@@ -32,13 +34,21 @@ gulp.task('sass:prod', function () {
     .pipe(gulp.dest(buildPath + '/styles'));
 });
 
-gulp.task('build:webpack', function() {
-  return gulp.src(publicPath + '/javascripts/components/main.jsx')
-    .pipe(webpack( require('./webpack.gulp.js') ))
+gulp.task('dev:webpack', function() {
+
+  return gulp.src(publicPath + '/javascripts/components/main.js')
+    .pipe(webpack( require('./webpack.dev.js') ))
+    .pipe(gulp.dest(buildPath + '/js'));
+});
+
+gulp.task('production:webpack', function() {
+
+  return gulp.src(publicPath + '/javascripts/components/main.js')
+    .pipe(webpack( require('./webpack.prod.js') ))
     .pipe(gulp.dest(buildPath + '/js'));
 });
 
 gulp.task('watch', function() {
   gulp.watch(publicPath + '/styles/sass/**/*.scss', ['sass:dev']);
-  gulp.watch(publicPath + '/javascripts/components/**/*.jsx', ['build:webpack']);
+  gulp.watch(publicPath + '/javascripts/components/**/*.js', ['dev:webpack']);
 });
