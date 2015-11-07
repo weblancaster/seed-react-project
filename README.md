@@ -3,6 +3,13 @@ Node React Stack
 
 Node React Stack is a starter kit project created to help bootstrap a quick prototype or even an real application.
 
+(Under development) Deadline: 11/09/15 (mm/dd/yy)
+
+- Node/Express (Hbs)
+- React + React Router + Redux
+- Gulp
+- Webpack
+
 
 ### Prerequisite
 
@@ -44,8 +51,10 @@ gulp watch
 
 ### TODO's
 
-- [ ] Add react hotload
-- [ ] Add Unit tests Browser env (Karma, Mocha + chai, Sinon).
-- [ ] Add Unit tests Node env (Mocha + chai, Sinon).
 - [ ] Improve Webpack configs (Dev, Prod)
 - [ ] Improve Gulp (Dev, Prod)
+- [ ] Add react hotload
+- [ ] Add React Router
+- [ ] Add Redux
+- [ ] Add Unit tests Browser env (Karma, Mocha + chai, Sinon).
+- [ ] Add Unit tests Node env (Mocha + chai, Sinon).
