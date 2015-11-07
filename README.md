@@ -1,9 +1,7 @@
 Node React Stack
 ======================
 
-Node React Stack is a starter kit project created to help bootstrap a quick prototype or even an real application.
-
-(Under development) Deadline: 11/09/15 (mm/dd/yy)
+Node React Stack is a starter kit project created to help bootstrap a quick application.
 
 - Node/Express (Hbs)
 - React + React Router + Redux
