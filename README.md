@@ -52,9 +52,7 @@ gulp watch
 
 ### TODO's
 
-- [ ] Improve Webpack configs (Dev, Prod)
-- [ ] Improve Gulp (Dev, Prod)
-- [ ] Add react hotload
+- [ ] Add react hotload (will need to wait a bit https://github.com/gaearon/babel-plugin-react-transform/issues/46)
 - [ ] Add React Router
 - [ ] Add Redux
 - [ ] Add Unit tests Browser env (Karma, Mocha + chai, Sinon).
