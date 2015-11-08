@@ -8,6 +8,7 @@ Node React Stack is a starter kit project created to help bootstrap a quick appl
 - Babel 6
 - Gulp
 - Webpack
+- Unit tests (Karma + Mocha + Chai + Sinon)
 
 
 ### Prerequisite
