@@ -28,5 +28,5 @@ class Main extends Component {
 
 ReactDOM.render(
     <Main />,
-    document.querySelector('#app')
+    document.body
 );

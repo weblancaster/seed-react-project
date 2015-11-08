@@ -19,21 +19,22 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'node_modules/es5-shim/es5-shim.js',
       'public/javascripts/components/main.js',
-      'test/**/*Spec.js'
-    ],
-
-
-    // list of files to exclude
-    exclude: [
+      'test/**/*-spec.js'
     ],
 
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'public/javascripts/components/main.js': ['webpack', 'sourcemap']
+      'test/**/*.js': ['webpack'],
+      'public/javascripts/**/*.js': ['webpack', 'sourcemap']
     },
+
+    // list of files to exclude
+    exclude: [
+    ],
 
     webpack: {
       // karma watches the test entry points
