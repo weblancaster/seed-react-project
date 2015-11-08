@@ -59,5 +59,3 @@ gulp watch
 - [ ] Add react hotload (will need to wait a bit https://github.com/gaearon/babel-plugin-react-transform/issues/46)
 - [ ] Add React Router
 - [ ] Add Redux
-- [ ] Add Unit tests Browser env (Karma, Mocha + chai, Sinon).
-- [ ] Add Unit tests Node env (Mocha + chai, Sinon).
