@@ -20,7 +20,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'node_modules/es5-shim/es5-shim.js',
-      'public/javascripts/components/main.js',
+      //'public/javascripts/components/main.js',
       'test/**/*-spec.js'
     ],
 
@@ -28,31 +28,15 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'test/**/*.js': ['webpack'],
-      'public/javascripts/**/*.js': ['webpack', 'sourcemap']
+      'test/**/*.js': ['webpack', 'sourcemap']
+      //'public/javascripts/**/*.js': ['webpack', 'sourcemap']
     },
 
     // list of files to exclude
     exclude: [
     ],
 
-    webpack: {
-      // karma watches the test entry points
-      // (you don't need to specify the entry option)
-      // webpack watches dependencies
-
-      // webpack configuration
-      devtool: 'inline-source-map',
-      module: {
-        loaders: [
-          {
-            test: /\.js?$/,
-            exclude: /node_modules/,
-            loader: 'babel-loader'
-          }
-        ]
-      }
-    },
+    webpack: require('./webpack.dev.js'),
 
     webpackMiddleware: {
       // webpack-dev-middleware configuration
