@@ -37,13 +37,13 @@ Compile sass for production
 gulp sass:prod
 ```
 
-Run webpack dev
+Run webpack development
 
 ```ruby
 gulp webpack:dev
 ```
 
-Run webpack dev
+Run webpack production
 
 ```ruby
 gulp webpack:prod
@@ -53,6 +53,12 @@ Watch js to run webpack and watch sass to run gulp sass
 
 ```ruby
 gulp watch
+```
+
+Build SASS and JS to production
+
+```ruby
+gulp build
 ```
 
 ### TODO's
