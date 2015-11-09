@@ -40,13 +40,13 @@ gulp sass:prod
 Run webpack dev
 
 ```ruby
-gulp dev:webpack
+gulp webpack:dev
 ```
 
 Run webpack dev
 
 ```ruby
-gulp prod:webpack
+gulp webpack:prod
 ```
 
 Watch js to run webpack and watch sass to run gulp sass
