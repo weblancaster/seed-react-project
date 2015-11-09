@@ -34,21 +34,23 @@ gulp.task('sass:prod', function () {
     .pipe(gulp.dest(buildPath + '/styles'));
 });
 
-gulp.task('dev:webpack', function() {
+gulp.task('webpack:dev', function() {
 
-  return gulp.src(publicPath + '/javascripts/components/main.js')
+  return gulp.src(publicPath + '/javascripts/routes.js')
     .pipe(webpack( require('./webpack.dev.js') ))
     .pipe(gulp.dest(buildPath + '/js'));
 });
 
-gulp.task('production:webpack', function() {
+gulp.task('webpack:prod', function() {
 
-  return gulp.src(publicPath + '/javascripts/components/main.js')
+  return gulp.src(publicPath + '/javascripts/routes.js')
     .pipe(webpack( require('./webpack.prod.js') ))
     .pipe(gulp.dest(buildPath + '/js'));
 });
 
-gulp.task('watch', function() {
+gulp.task('build', ['sass:prod', 'webpack:prod']);
+
+gulp.task('watch', ['sass:dev', 'webpack:dev'], function() {
   gulp.watch(publicPath + '/styles/sass/**/*.scss', ['sass:dev']);
-  gulp.watch(publicPath + '/javascripts/components/**/*.js', ['dev:webpack']);
+  gulp.watch(publicPath + '/javascripts/**/*.js', ['webpack:dev']);
 });

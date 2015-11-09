@@ -1,6 +1,8 @@
+'use strict';
+
 import React, { Component } from 'react';
 
-export default class Message extends Component {
+class Message extends Component {
   constructor (props) {
     super(props);
   }
@@ -11,3 +13,5 @@ export default class Message extends Component {
     )
   }
 }
+
+export default Message;
