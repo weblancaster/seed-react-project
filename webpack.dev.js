@@ -26,7 +26,8 @@ module.exports = {
   resolve: {
     // add shortcut as alias
     alias: {
-      '@components': path.join(__dirname, 'public/javascripts/components')
+      '@components': path.join(__dirname, 'public/javascripts/components'),
+      '@javascripts': path.join(__dirname, 'public/javascripts')
     },
     // extensions listed here can be omitted in `import`s
     extensions: ['', '.js', '.jsx'],
