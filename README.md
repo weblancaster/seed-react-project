@@ -63,4 +63,5 @@ gulp build
 
 ### TODO's
 
+- [ ] Improve Redux with a better use case
 - [ ] Add react hotload (will need to wait a bit https://github.com/gaearon/babel-plugin-react-transform/issues/46)
