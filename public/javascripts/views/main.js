@@ -4,18 +4,16 @@ import React, { Component } from 'react';
 import { RouteHandler } from 'react-router';
 import { createStore, combineReducers } from 'redux';
 
-// store
-import store from '../store/store';
-
 //components
-import Header from './common/header';
+import Header from '../components/header';
 
-store.dispatch({
-  type: 'GET',
-  isVisible: false
-});
+// store
+import configureStore from '../store/configureStore';
+import { setVisibility } from '../actions/common'
 
-console.log(store.getState())
+const store = configureStore();
+
+store.dispatch(setVisibility(true));
 
 class Main extends Component {
   constructor(props) {

@@ -7,13 +7,15 @@ import createBrowserHistory from 'history/lib/createBrowserHistory';
 import { Provider } from 'react-redux'
 
 // store
-import store from './store/store';
+import configureStore from './store/configureStore';
 
 // components
-import Main from '@components/main';
-import Home from '@components/home/home';
-import About from '@components/about/about';
-import Contact from '@components/contact/contact';
+import Main from './views/main';
+import Home from './views/home';
+import About from './views/about';
+import Contact from './views/contact';
+
+const store = configureStore();
 
 render((
   <Provider store={store}>
@@ -24,8 +26,7 @@ render((
         <Route path="contact" component={Contact} />
       </Route>
     </Router>
-  </Provider>
-    ),
+  </Provider>),
   document.querySelector('#app')
 );
 

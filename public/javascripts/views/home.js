@@ -2,8 +2,8 @@
 
 import React, { Component } from 'react';
 
-import Welcome from './welcome';
-import Message from './message';
+import Welcome from '../components/welcome';
+import Message from '../components/message';
 
 
 class Home extends Component {

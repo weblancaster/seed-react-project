@@ -6,6 +6,7 @@ import { createStore, combineReducers } from 'redux';
 // reducers combined
 import reducers from '../reducers/index'
 
-const store = createStore(reducers);
-
-export default store;
+export default function configureStore(initialState) {
+  const store = createStore(reducers, initialState);
+  return store;
+}

@@ -3,9 +3,9 @@
 import * as types from '../constants/actionTypes';
 
 const about = (state = {}, action) => {
-  console.log('reducer called', state, action)
+  console.log('reducer called', state, action);
   switch ( action.type ) {
-    case types.VISIBLE:
+    case types.IS_VISIBLE:
       return {
         ...state,
         isVisible: action.isVisible

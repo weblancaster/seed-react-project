@@ -11,7 +11,7 @@
     "generator-star-spacing": [1, "after"],
     "guard-for-in": 1,
     "indent": [1, 2],
-    "no-console": 1,
+    "no-console": 0,
     "no-eq-null": 2,
     "no-extra-parens": 0,
     "no-lonely-if": 1,
