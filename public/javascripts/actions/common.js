@@ -3,8 +3,10 @@
 import * as types from '../constants/actionTypes';
 
 export function setVisibility(val) {
-  return {
-    type: 'IS_VISIBLE',
-    isVisible: val
+  return (dispatch, state) => {
+    return {
+      type: 'IS_VISIBLE',
+      isVisible: val
+    }
   }
 }

@@ -10,10 +10,10 @@ import { Provider } from 'react-redux'
 import configureStore from './store/configureStore';
 
 // components
-import Main from './views/main';
-import Home from './views/home';
-import About from './views/about';
-import Contact from './views/contact';
+import Main from './containers/main';
+import Home from './containers/home';
+import About from './containers/about';
+import Contact from './containers/contact';
 
 const store = configureStore();
 

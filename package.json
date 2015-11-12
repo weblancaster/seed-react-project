@@ -61,6 +61,7 @@
     "react-redux": "^4.0.0",
     "react-router": "^1.0.0-rc4",
     "redux": "^3.0.4",
+    "redux-thunk": "^1.0.0",
     "serve-favicon": "~2.3.0"
   }
 }
