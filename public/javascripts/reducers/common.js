@@ -2,19 +2,12 @@
 
 import * as types from '../constants/actionTypes';
 
-export const mainTitle = (state = '', action) => {
+export const fetchContent = (state = {}, action) => {
   switch ( action.type ) {
-    case types.GET_MESSAGE:
-      return 'React Stack';
-    default:
-      return state;
-  }
-};
-
-export const mainDescription = (state = '', action) => {
-  switch ( action.type ) {
-    case types.GET_MESSAGE:
-      return 'Welcome to React Stack';
+    case types.FETCH_CONTENT:
+      return {
+        content: action.content
+      }
     default:
       return state;
   }

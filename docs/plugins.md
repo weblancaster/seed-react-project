@@ -1,14 +1,7 @@
-Node React Stack
+Plugins
 ======================
 
-Node React Stack is a starter kit project created to help bootstrap a quick application.
-
-- Node/Express (Hbs)
-- React + React Router + Redux
-- Babel 6
-- Gulp
-- Webpack
-- Unit tests (Karma + Mocha + Chai + Sinon)
+Node React Stack is a starter kit project created to help bootstrap a quick prototype or even an real application.
 
 
 ### Prerequisite
@@ -60,8 +53,3 @@ Build SASS and JS to production
 ```ruby
 gulp build
 ```
-
-### TODO's
-
-- Improve documentation (intro and plugins)
-- [ ] Add react hotload (will need to wait a bit https://github.com/gaearon/babel-plugin-react-transform/issues/46)
