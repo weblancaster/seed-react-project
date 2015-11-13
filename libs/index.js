@@ -2,7 +2,21 @@
 
 let path = require('path');
 let fs = require('fs');
-let markdown = require("markdown").markdown;
+let marked = require('marked');
+
+marked.setOptions({
+  renderer: new marked.Renderer(),
+  gfm: true,
+  tables: true,
+  breaks: false,
+  pedantic: false,
+  sanitize: true,
+  smartLists: true,
+  smartypants: false,
+  highlight: function (code) {
+    return require('highlight.js').highlightAuto(code).value;
+  }
+});
 
 let markDownPath = path.join(__dirname, '../docs');
 
@@ -20,7 +34,7 @@ module.exports = function transformMarkdown(name) {
 function markdownToHtml(file) {
   let filePath = path.join(markDownPath, file);
   let markdownFile = fs.readFileSync(filePath);
-  let markdownAsHTML = markdown.toHTML(markdownFile.toString());
+  let markdownAsHTML = marked(markdownFile.toString());
 
   return markdownAsHTML;
 }

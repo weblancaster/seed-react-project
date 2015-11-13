@@ -18,7 +18,7 @@ class About extends Component {
     let { content } = this.props;
 
     return (
-      <div dangerouslySetInnerHTML={{__html: content}} />
+      <div className="markdown-body" dangerouslySetInnerHTML={{__html: content}} />
     )
   }
 }

@@ -1,0 +1,24 @@
+.nav {
+  min-width: 200px;
+  max-width: 790px;
+  margin: 25px auto 0;
+  padding: 0;
+}
+
+.nav_item {
+  display: inline-block;
+  list-style: none;
+
+  a {
+    padding: .5em 1em;
+    color: #777;
+    text-decoration: none;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+    font-weight: 100;
+
+    &:hover {
+      background-color: #eee;
+    }
+  }
+}

@@ -1,7 +1,7 @@
-Node React Stack
+Node React Stack starter kit
 ======================
 
-Node React Stack is a starter kit project created to help bootstrap a quick application.
+This project is a starter kit project created to quickly help bootstrap an Application with the tech stack listed below.
 
 - Node/Express (Hbs)
 - React + React Router + Redux
@@ -10,6 +10,7 @@ Node React Stack is a starter kit project created to help bootstrap a quick appl
 - Webpack
 - Unit tests (Karma + Mocha + Chai + Sinon)
 
+It is built to easily add or remove modules.
 
 ### Prerequisite
 

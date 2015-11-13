@@ -9,7 +9,10 @@ class Message extends Component {
 
   render () {
     return (
-      <p>{this.props.msg}</p>
+      <div>
+      	<p>{this.props.msg}</p>
+      	<p>{this.props.subMsg}</p>
+      </div>
     )
   }
 }

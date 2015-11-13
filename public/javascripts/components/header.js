@@ -11,11 +11,14 @@ class Header extends Component {
   render () {
     return (
       <nav className="header">
-        <ul>
-          <li>
+        <ul className="nav">
+          <li className="nav_item">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="nav_item">
             <Link to="/intro">Intro</Link>
           </li>
-          <li>
+          <li className="nav_item">
             <Link to="/plugins">Plugins</Link>
           </li>
         </ul>
