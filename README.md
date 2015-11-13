@@ -63,5 +63,5 @@ gulp build
 
 ### TODO's
 
-- Improve documentation (intro and plugins)
+- [ ] Improve documentation (intro and plugins)
 - [ ] Add react hotload (will need to wait a bit https://github.com/gaearon/babel-plugin-react-transform/issues/46)
