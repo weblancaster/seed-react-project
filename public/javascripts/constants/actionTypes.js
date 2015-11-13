@@ -1,4 +1,3 @@
 'use strict';
 
-export const GET_MESSAGE = 'GET_MESSAGE';
-export const IS_VISIBLE = 'IS_VISIBLE';
+export const FETCH_CONTENT = 'FETCH_CONTENT';

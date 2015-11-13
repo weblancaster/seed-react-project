@@ -12,8 +12,8 @@ import configureStore from './store/configureStore';
 // components
 import Main from './containers/main';
 import Home from './containers/home';
-import About from './containers/about';
-import Contact from './containers/contact';
+import Intro from './containers/intro';
+import Plugins from './containers/plugins';
 
 const store = configureStore();
 
@@ -22,8 +22,8 @@ render((
     <Router history={createBrowserHistory()}>
       <Route path="/" component={Main}>
         <IndexRoute component={Home} />
-        <Route path="about" component={About} />
-        <Route path="contact" component={Contact} />
+        <Route path="intro" component={Intro} />
+        <Route path="plugins" component={Plugins} />
       </Route>
     </Router>
   </Provider>),

@@ -13,10 +13,10 @@ class Header extends Component {
       <nav className="header">
         <ul>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/intro">Intro</Link>
           </li>
           <li>
-            <Link to="/contact">contact</Link>
+            <Link to="/plugins">Plugins</Link>
           </li>
         </ul>
       </nav>
