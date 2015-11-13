@@ -3,22 +3,13 @@
 let transformMarkdown = require('../libs/index');
 
 module.exports = function(router) {
-  router.route('/docs/intro')
+  router.route('/docs/:name')
     .get(function(req, res, next) {
-      let markdownAsHTML = transformMarkdown('intro');
+      let name = req.params.name;
+      let markdownAsHTML = transformMarkdown(name);
 
       res.json({
         data: markdownAsHTML
       });
     });
-
-  router.route('/docs/plugins')
-    .get(function(req, res, next) {
-      let markdownAsHTML = transformMarkdown('plugins');
-
-      res.json({
-        data: markdownAsHTML
-      });
-    });
-
 };
