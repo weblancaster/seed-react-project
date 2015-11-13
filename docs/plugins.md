@@ -3,7 +3,7 @@ Plugins
 
 Here you will find a list of plugins/modules most known and used by the open source community and/or private companies.
 
-Our goal is to filter them down to the best and most useful ones, keep in mind that plugins with too much or even any DOM manipulation outside of the React environment may not be accepted to the be part of the list.
+Our goal is to filter them down to the best and most useful ones, keep in mind that plugins with too much or even any DOM manipulation outside of the React environment may not be accepted to be part of the list.
 
 
 ### Prerequisite
