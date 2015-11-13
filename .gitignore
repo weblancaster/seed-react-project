@@ -31,6 +31,5 @@ node_modules/
 .lock-wscript
 
 /.idea
-build/
 
 /coverage
