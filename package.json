@@ -17,6 +17,9 @@
   },
   "author": "Michael Lancaster",
   "license": "MIT",
+  "engines": {
+    "node": "4.2.1"
+  },
   "devDependencies": {
     "babel-core": "^6.1.2",
     "babel-loader": "^6.0.1",
