@@ -26,6 +26,14 @@ To install dependencies
 npm install
 ```
 
+Then
+
+```ruby
+npm start
+```
+
+Go to http://localhost:3000/
+
 ### Development
 
 Compile sass for development
