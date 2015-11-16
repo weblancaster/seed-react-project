@@ -68,7 +68,7 @@ gulp build
 
 First, building, testing, and reporting bugs is highly appreciated. Please include console's output and steps to reproduce the problem in your bug report if possible.
 
-Please follow the [contribution guidelines](CONTRIBUTING.md).
+Please follow the [contribution guidelines](CONTRIBUTING.md)
 
 ### TODO's
 
