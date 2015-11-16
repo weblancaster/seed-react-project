@@ -101,8 +101,16 @@ https://medium.com/@housecor/browserify-vs-webpack-b3d7ca08a0a9
 To install dependencies
 
 ```ruby
-sudo npm install
+npm install
 ```
+
+Then
+
+```ruby
+npm start
+```
+
+Go to http://localhost:3000/
 
 ### Development
 
