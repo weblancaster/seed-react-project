@@ -71,6 +71,12 @@ A variety of tools are in use from unit tests to build process and code quality 
 +-- webpack.prod.js // takes modules with dependencies and generates static assets representing those modules for prod environment (uses Babel 6)
 ```
 
+Why?
+
+Although webpack and broserify seems and have some the same concepts you will find here why Webpack is a better choice than Browserify for the problems/projects history/upcoming.
+
+https://medium.com/@housecor/browserify-vs-webpack-b3d7ca08a0a9
+
 ### Prerequisite
 
 - Node.js v5.0
