@@ -9,8 +9,6 @@ class Main extends Component {
   }
 
   render () {
-    let { store } = this.props;
-
     return (
       <div>
         <Header />
