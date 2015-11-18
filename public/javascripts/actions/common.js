@@ -1,7 +1,7 @@
 'use strict';
 
 import 'whatwg-fetch';
-import * as types from '../constants/actionTypes';
+import * as types from '../constants/actionTypes'; // import all action types
 
 export function formatContent(json) {
   return {

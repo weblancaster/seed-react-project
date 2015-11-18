@@ -6,7 +6,7 @@ let webpack = require('webpack');
 module.exports = {
   devtool: 'source-map',
   entry: [
-    path.join(__dirname, './public/javascripts/routes.js')
+    path.join(__dirname, './public/javascripts/routes.jsx')
   ],
   output: {
     path: path.join(__dirname, './public/build/js'),
@@ -16,7 +16,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js?$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       }

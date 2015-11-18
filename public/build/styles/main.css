@@ -1,19 +1,30 @@
+/* ==========================================================================
+@default
+========================================================================== */
+/* line 1, /Users/mlancaster/Sites/github/node-react-stack-kit/public/styles/sass/_components/_default.scss */
 * {
   box-sizing: border-box; }
 
+/* line 5, /Users/mlancaster/Sites/github/node-react-stack-kit/public/styles/sass/_components/_default.scss */
 body {
   font-family: helvetica, sans-serif; }
 
+/* ==========================================================================
+@header
+========================================================================== */
+/* line 1, /Users/mlancaster/Sites/github/node-react-stack-kit/public/styles/sass/_components/_header.scss */
 .nav {
   min-width: 200px;
   max-width: 790px;
   margin: 25px auto 0;
   padding: 0; }
 
+/* line 8, /Users/mlancaster/Sites/github/node-react-stack-kit/public/styles/sass/_components/_header.scss */
 .nav_item {
   display: inline-block;
   list-style: none; }
 
+/* line 12, /Users/mlancaster/Sites/github/node-react-stack-kit/public/styles/sass/_components/_header.scss */
 .nav_item a {
   padding: .5em 1em;
   color: #777;
@@ -22,13 +33,16 @@ body {
   letter-spacing: 0.01em;
   font-weight: 100; }
 
+/* line 20, /Users/mlancaster/Sites/github/node-react-stack-kit/public/styles/sass/_components/_header.scss */
 .nav_item a:hover {
   background-color: #eee; }
 
+/* ==========================================================================
+@content
+========================================================================== */
+/* line 1, /Users/mlancaster/Sites/github/node-react-stack-kit/public/styles/sass/_components/_content.scss */
 .markdown-body {
   min-width: 200px;
   max-width: 790px;
   margin: 0 auto;
   padding: 30px 0; }
-
-/*# sourceMappingURL=main.css.map */

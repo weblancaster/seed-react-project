@@ -1,15 +1,15 @@
 'use strict';
 
 let gulp = require('gulp');
-let sass = require('gulp-sass');
-let sourcemaps = require('gulp-sourcemaps');
-let webpack = require('webpack-stream');
-let concat = require('gulp-concat');
-let uglify = require('gulp-uglify');
-var minifyCss = require('gulp-minify-css');
+let sass = require('gulp-sass'); // compile sass to css
+let sourcemaps = require('gulp-sourcemaps'); // generate sourcemaps from raw files
+let webpack = require('webpack-stream'); // Run webpack through a stream interface aka make compatible with gulp
+let concat = require('gulp-concat'); // combine multiple files in one
+let uglify = require('gulp-uglify'); // parse js files and apply any compression options changing the output code
+let minifyCss = require('gulp-minify-css'); // remove css spacing "compress"
 
-let publicPath = './public';
-let buildPath = publicPath + '/build';
+const publicPath = './public';
+const buildPath = publicPath + '/build';
 
 gulp.task('sass:dev', function () {
   let sassOptions = {
@@ -39,14 +39,14 @@ gulp.task('sass:prod', function () {
 
 gulp.task('webpack:dev', function () {
 
-  return gulp.src(publicPath + '/javascripts/routes.js')
+  return gulp.src(publicPath + '/javascripts/routes.jsx')
     .pipe(webpack(require('./webpack.dev.js')))
     .pipe(gulp.dest(buildPath + '/javascripts'));
 });
 
 gulp.task('webpack:prod', function () {
 
-  return gulp.src(publicPath + '/javascripts/routes.js')
+  return gulp.src(publicPath + '/javascripts/routes.jsx')
     .pipe(webpack(require('./webpack.prod.js')))
     .pipe(gulp.dest(buildPath + '/javascripts'));
 });
@@ -70,5 +70,5 @@ gulp.task('build', ['sass:prod', 'webpack:prod', 'css:vendor']);
 
 gulp.task('watch', ['sass:dev', 'webpack:dev'], function () {
   gulp.watch(publicPath + '/styles/sass/**/*.scss', ['sass:dev']);
-  gulp.watch(publicPath + '/javascripts/**/*.js', ['webpack:dev']);
+  gulp.watch([publicPath + '/javascripts/**/*.js', publicPath + '/javascripts/**/*.jsx'], ['webpack:dev']);
 });

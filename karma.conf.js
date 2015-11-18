@@ -20,7 +20,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'node_modules/es5-shim/es5-shim.js',
-      //'public/javascripts/components/main.js',
+      //'public/javascripts/components/main.jsx',
       'test/**/*-spec.js'
     ],
 
