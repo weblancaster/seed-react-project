@@ -12,7 +12,7 @@ export function formatContent(json) {
 
 export function fetchContent(path) {
   return (dispatch, getState) => {
-    return fetch(`/api/docs/${path}`)
+    fetch(`/api/docs/${path}`)
       .then(response => response.json())
       .then(json => {
         dispatch(formatContent(json))

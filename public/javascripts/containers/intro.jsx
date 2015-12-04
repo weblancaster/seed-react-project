@@ -23,10 +23,13 @@ class About extends Component {
   }
 }
 
-export default connect((state) => {
-  let { fetchContent } = state;
+function mapStateToProps(state) {
+  let { content } = state.fetchContent;
+
   return {
-    content: fetchContent.content
+    content: content
   }
-})(About);
+}
+
+export default connect(mapStateToProps)(About);
 
