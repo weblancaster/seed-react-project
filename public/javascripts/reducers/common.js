@@ -4,11 +4,11 @@ import * as types from '../constants/actionTypes';
 
 const initialState = {};
 
-export const fetchContent = (state = initialState, action) => {
+export default function content(state = initialState, action) {
   switch ( action.type ) {
     case types.FETCH_CONTENT:
       return Object.assign({}, state, {
-        content: action.content
+        data: action.data
       });
     default:
       return state;
