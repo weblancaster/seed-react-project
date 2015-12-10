@@ -4,8 +4,10 @@ import React from 'react';
 import { combineReducers } from 'redux';
 
 // reducers
-import * as reducers from './common';
+import content from './common';
 
-const combinedReducers = combineReducers(reducers);
+const combinedReducers = combineReducers({
+  content
+});
 
 export default combinedReducers;

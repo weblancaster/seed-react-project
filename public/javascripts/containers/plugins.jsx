@@ -24,9 +24,10 @@ class Plugins extends Component {
 }
 
 export default connect((state) => {
-  let { fetchContent } = state;
+  let { content } = state;
+
   return {
-    content: fetchContent.content
+    content: content.data
   }
 })(Plugins);
 

@@ -24,10 +24,10 @@ class About extends Component {
 }
 
 function mapStateToProps(state) {
-  let { content } = state.fetchContent;
+  let { content } = state;
 
   return {
-    content: content
+    content: content.data
   }
 }
 

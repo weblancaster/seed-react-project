@@ -5,12 +5,13 @@ let webpack = require('webpack');
 
 module.exports = {
   // sourcemap support
-  devtool: 'eval',
+  devtool: 'cheap-module-eval-source-map',
   entry: [
+    'webpack-hot-middleware/client',
     path.join(__dirname, './public/javascripts/routes.jsx')
   ],
   output: {
-    path: path.join(__dirname, './public/build/js'),
+    path: path.join(__dirname, './public/build/javascripts'),
     filename: 'bundle.js',
     publicPath: '/'
   },
@@ -33,5 +34,10 @@ module.exports = {
     extensions: ['', '.js', '.jsx'],
     // directories which are searched implicitly in `import`s
     modulesDirectories: ['node_modules', 'components', 'vendors']
-  }
+  },
+  plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ]
 };

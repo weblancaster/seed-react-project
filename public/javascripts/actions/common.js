@@ -6,7 +6,7 @@ import * as types from '../constants/actionTypes'; // import all action types
 export function formatContent(json) {
   return {
     type: types.FETCH_CONTENT,
-    content: json.data
+    data: json.data
   }
 }
 
