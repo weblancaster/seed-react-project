@@ -49,8 +49,7 @@ if (app.get('env') === 'development') {
 
   app.use(require("webpack-dev-middleware")(compiler, {
     publicPath: webpackConfig.output.publicPath,
-    noInfo: true,
-    headers: { "X-Custom-Header": "yes" }
+    noInfo: true
   }));
 
   app.use(require("webpack-hot-middleware")(compiler));
