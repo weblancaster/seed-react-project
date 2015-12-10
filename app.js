@@ -49,7 +49,8 @@ if (app.get('env') === 'development') {
 
   app.use(require("webpack-dev-middleware")(compiler, {
     publicPath: webpackConfig.output.publicPath,
-    noInfo: true
+    noInfo: true,
+    headers: { "X-Custom-Header": "yes" }
   }));
 
   app.use(require("webpack-hot-middleware")(compiler));
@@ -77,4 +78,4 @@ app.use(function(err, req, res, next) {
 });
 
 
-module.exports = app;
+export default app;
