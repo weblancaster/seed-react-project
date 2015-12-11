@@ -1,8 +1,8 @@
 'use strict';
 
-let path = require('path');
-let fs = require('fs');
-let marked = require('marked');
+import path from 'path';
+import fs from 'fs';
+import marked from 'marked';
 
 marked.setOptions({
   renderer: new marked.Renderer(),
@@ -18,9 +18,9 @@ marked.setOptions({
   }
 });
 
-let markDownPath = path.join(__dirname, '../docs');
+const markDownPath = path.join(__dirname, '../docs');
 
-module.exports = function transformMarkdown(name) {
+export default function transformMarkdown(name) {
   let files = fs.readdirSync(markDownPath);
 
   for ( let i = 0; i < files.length; i++ ) {

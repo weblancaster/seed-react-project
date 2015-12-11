@@ -1,8 +1,8 @@
 'use strict';
 
-let transformMarkdown = require('../libs/index');
+import transformMarkdown from '../libs/index';
 
-module.exports = function(router) {
+export default function api(router) {
   router.route('/docs/:name')
     .get(function(req, res, next) {
       let name = req.params.name;
