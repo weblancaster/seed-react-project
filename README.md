@@ -77,7 +77,3 @@ gulp build
 First, building, testing, and reporting bugs is highly appreciated. Please include console's output and steps to reproduce the problem in your bug report if possible.
 
 Please follow the [contribution guidelines](CONTRIBUTING.md)
-
-### TODO's
-
-- [ ] Add react hotload (will need to wait a bit https://github.com/gaearon/babel-plugin-react-transform/issues/46)
