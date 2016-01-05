@@ -35,10 +35,7 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-// error handlers
-
-// development error handler
-// will print stacktrace
+// development environment
 if (app.get('env') === 'development') {
 
   //
@@ -58,6 +55,9 @@ if (app.get('env') === 'development') {
   //
   // Express dev env setup
   //
+
+  // development error handler
+  // will print stacktrace
   app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
