@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
 
-import Header from '@components/common/header';
+import Header from '@components/header';
 
 describe('test', () => {
   let header;
