@@ -49,6 +49,7 @@
     "mocha": "^2.3.3",
     "phantomjs": "^1.9.18",
     "phantomjs-polyfill": "0.0.1",
+    "progress-bar-webpack-plugin": "^1.2.0",
     "react-addons-test-utils": "^0.14.2",
     "react-transform-catch-errors": "^1.0.1",
     "react-transform-hmr": "^1.0.1",
@@ -56,8 +57,6 @@
     "redux-devtools": "^2.1.5",
     "sinon": "^1.17.2",
     "webpack": "^1.12.2",
-    "webpack-dev-middleware": "^1.4.0",
-    "webpack-hot-middleware": "^2.6.0",
     "webpack-stream": "^2.1.1"
   },
   "dependencies": {

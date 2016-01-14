@@ -2,12 +2,12 @@
 
 let path = require('path');
 let webpack = require('webpack');
+let ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 module.exports = {
   // sourcemap support
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'eval',
   entry: [
-    'webpack-hot-middleware/client',
     path.join(__dirname, './public/javascripts/routes.jsx')
   ],
   output: {
@@ -36,6 +36,7 @@ module.exports = {
     modulesDirectories: ['node_modules', 'components', 'vendors']
   },
   plugins: [
+    new ProgressBarPlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
