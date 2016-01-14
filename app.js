@@ -39,20 +39,6 @@ app.use(function(req, res, next) {
 if (app.get('env') === 'development') {
 
   //
-  // Webpack dev env setup
-  //
-  let webpack = require('webpack');
-  let webpackConfig = require('./webpack.dev');
-  let compiler = webpack(webpackConfig);
-
-  app.use(require("webpack-dev-middleware")(compiler, {
-    publicPath: webpackConfig.output.publicPath,
-    noInfo: true
-  }));
-
-  app.use(require("webpack-hot-middleware")(compiler));
-
-  //
   // Express dev env setup
   //
 

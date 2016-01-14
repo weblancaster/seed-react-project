@@ -11,6 +11,12 @@ let minifyCss = require('gulp-minify-css'); // remove css spacing "compress"
 const publicPath = './public';
 const buildPath = publicPath + '/build';
 
+function handleError(error) {
+  console.log(error.toString());
+
+  this.emit('end'); // stop gulp from hanging
+}
+
 gulp.task('sass:dev', function () {
   let sassOptions = {
     outputStyle: 'expanded',
@@ -41,6 +47,7 @@ gulp.task('webpack:dev', function () {
 
   return gulp.src(publicPath + '/javascripts/routes.jsx')
     .pipe(webpack(require('./webpack.dev.js')))
+    .on('error', handleError)
     .pipe(gulp.dest(buildPath + '/javascripts'));
 });
 
@@ -53,15 +60,15 @@ gulp.task('webpack:prod', function () {
 
 gulp.task('css:vendor', function (callback) {
   return gulp.src([
-    './node_modules/normalize.css/normalize.css',
-    './node_modules/github-markdown-css/github-markdown.css'
-  ])
+      './node_modules/normalize.css/normalize.css',
+      './node_modules/github-markdown-css/github-markdown.css'
+    ])
     .pipe(sourcemaps.init())
     .pipe(concat('vendors.min.css'))
     .pipe(minifyCss())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(buildPath + '/vendors'))
-    .on('error', function(err) {
+    .on('error', function (err) {
       throw new Error(err, 'Can\' concat and/or minify css:vendor')
     });
 });
