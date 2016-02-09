@@ -34,7 +34,9 @@ module.exports = {
     modulesDirectories: ['node_modules', 'components', 'vendors']
   },
   plugins: [
-    // minify all assets
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false }})
+    new webpack.NoErrorsPlugin(),
   ]
 };
