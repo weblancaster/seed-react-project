@@ -24,7 +24,9 @@ let config = Object.assign({}, baseConfig, {
         }),
         new webpack.NoErrorsPlugin()
     ],
-    module: defaultSettings.getDefaultModules()
+    module: {
+        loaders: []
+    }
 });
 
 // Add needed loaders to the defaults here

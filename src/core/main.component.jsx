@@ -1,5 +1,5 @@
-require('normalize.css');
-require('../index.scss');
+// require('normalize.css');
+import styles from '../index.scss';
 import React, { Component } from 'react';
 
 class Main extends Component {
