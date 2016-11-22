@@ -52,18 +52,19 @@ module.exports = {
                 loader: 'file?name=[name].[ext]'
             },
             {
-                test: /\.css$/,
-                loader: 'style-loader!css-loader'
+                test: /\.scss$/,
+                include: /src/,
+                loaders: [
+                    'style',
+                    'css?modules&sourceMap&importLoaders=1&localIdentName=[local]___[hash:base64:5]',
+                    'sass',
+                    'postcss'
+                ]
             },
             {
-                test: /\.scss$/,
-                include: srcPath,
-                loaders: ExtractTextPlugin.extract([
-                    'style-loader',
-                    'css-loader?modules&importLoaders=1&localIdentName=[local]___[hash:base64:5]',
-                    'postcss-loader',
-                    'sass-loader'
-                ])
+                test: /\.css$/,
+                exclude: /src/,
+                loader: 'style!css'
             }
         ]
     },
