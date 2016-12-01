@@ -1,4 +1,5 @@
 {
+  "parser": "babel-eslint",
   "rules": {
     "block-scoped-var": 1,
     "brace-style": [1, "1tbs"],
@@ -10,7 +11,7 @@
     "eol-last": 0,
     "generator-star-spacing": [1, "after"],
     "guard-for-in": 1,
-    "indent": [1, 2],
+    "indent": [1, 4],
     "no-console": 0,
     "no-eq-null": 2,
     "no-extra-parens": 0,
@@ -33,7 +34,6 @@
     "jsx-quotes": 1,
     "react/jsx-no-undef": 1,
     "react/jsx-sort-props": 1,
-    "react/jsx-sort-prop-types": 1,
     "react/jsx-uses-react": 1,
     "react/jsx-uses-vars": 1,
     "react/no-did-mount-set-state": 1,
@@ -44,7 +44,7 @@
     "react/react-in-jsx-scope": 1,
     "react/self-closing-comp": 1,
     "react/sort-comp": 1,
-    "react/wrap-multilines": 1
+    "react/jsx-wrap-multilines": 1
   },
   "env": {
     "es6": true,
@@ -68,6 +68,9 @@
   },
   "plugins": [
     "react"
-  ]
+  ],
+  "parserOptions": {
+    "sourceType": "module"
+  }
 }
 
