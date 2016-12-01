@@ -16,10 +16,10 @@ const store = configureStore();
 render(
     (<Provider store={store}>
         <Router history={browserHistory}>
-            <Route path="/" component={Main}>
+            <Route component={Main} path="/">
                 <IndexRoute component={Feat1} />
             </Route>
-            <Route path="*" component={NotFound} />
+            <Route component={NotFound} path="*" />
         </Router>
     </Provider>),
     document.querySelector('#app')
