@@ -13,4 +13,8 @@ class Main extends Component {
     }
 }
 
+Main.propTypes = {
+    children: React.PropTypes.object
+}
+
 export default Main;

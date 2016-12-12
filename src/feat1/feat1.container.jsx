@@ -22,6 +22,11 @@ class Feat1 extends Component {
     }
 }
 
+Feat1.propTypes = {
+    dispatch: React.PropTypes.func.isRequired,
+    counter: React.PropTypes.number.isRequired
+}
+
 function mapStateToProps(state) {
     let { counter } = state.feat1;
 
