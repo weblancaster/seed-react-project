@@ -1,7 +1,6 @@
 'use strict';
 
 const path = require('path');
-const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 let defaultSettings = require('./defaults');
 const srcPath = path.join(__dirname, '/../src');
@@ -52,19 +51,8 @@ module.exports = {
                 loader: 'file?name=[name].[ext]'
             },
             {
-                test: /\.scss$/,
-                include: /src/,
-                loaders: [
-                    'style',
-                    'css?modules&sourceMap&importLoaders=1&localIdentName=[local]___[hash:base64:5]',
-                    'sass',
-                    'postcss'
-                ]
-            },
-            {
                 test: /\.css$/,
-                exclude: /src/,
-                loader: 'style!css'
+                loader: 'style!css?module&importLoaders=1&localIdentName=[name]-[local]__[hash:base64:3]!postcss',
             }
         ]
     },
@@ -74,8 +62,12 @@ module.exports = {
             config: `${srcPath}/config/` + process.env.REACT_WEBPACK_ENV
         }
     },
-    postcss: function () {
-        return [autoprefixer];
+    postcss: function() {
+        return [
+            require('autoprefixer'),
+            require('postcss-simple-vars'),
+            require('postcss-partial-import')
+        ];
     },
     plugins: [
         new ExtractTextPlugin(`./dist/assets/styles.css`)
