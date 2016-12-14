@@ -23,21 +23,17 @@ let config = Object.assign({}, baseConfig, {
             'process.env.NODE_ENV': '"development"'
         }),
         new webpack.NoErrorsPlugin()
-    ],
-    module: {
-        loaders: []
-    }
+    ]
 });
 
 // Add needed loaders to the defaults here
-config.module.loaders.push({
-    test: /\.(js|jsx)$/,
-    loader: 'react-hot!babel-loader',
-    include: [].concat(
-        config.additionalPaths,
-        [path.join(__dirname, '/../src')]
-    )
-});
+config.module.loaders.push(
+    {
+        test: /\.(js|jsx)$/,
+        loader: 'react-hot!babel-loader',
+        include: [].concat(config.additionalPaths, [path.join(__dirname, '/../src')])
+    }
+);
 
 
 module.exports = config;

@@ -52,7 +52,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: 'style!css?module&importLoaders=1&localIdentName=[name]-[local]__[hash:base64:3]!postcss',
+                loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]-[local]___[hash:base64:5]!postcss'
             }
         ]
     },

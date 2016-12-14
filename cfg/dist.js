@@ -18,20 +18,14 @@ let config = Object.assign({}, baseConfig, {
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.AggressiveMergingPlugin(),
         new webpack.NoErrorsPlugin()
-    ],
-    module: {
-        loaders: []
-    }
+    ]
 });
 
 // Add needed loaders to the defaults here
 config.module.loaders.push({
     test: /\.(js|jsx)$/,
     loader: 'babel',
-    include: [].concat(
-        config.additionalPaths,
-        [defaultSettings.srcPath]
-    )
+    include: [].concat(config.additionalPaths, [defaultSettings.srcPath])
 });
 
 module.exports = config;
