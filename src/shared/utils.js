@@ -1,4 +1,3 @@
-
 /**
  * Check the response status and return
  * response or throw error

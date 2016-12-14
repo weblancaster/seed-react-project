@@ -1,0 +1,10 @@
+$baseFontSize: 65.2%;
+$baseFontFamily: helvetica, sans-serif, arial;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: $baseFontSize $baseFontFamily;
+}

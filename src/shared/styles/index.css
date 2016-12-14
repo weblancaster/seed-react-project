@@ -1,0 +1,11 @@
+$baseBackground: #eee;
+
+@import "base.css";
+
+.container {
+    background: $baseBackground;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
