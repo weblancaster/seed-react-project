@@ -18,11 +18,8 @@ This seed was created to rapidly and easily start a React stack project from scr
     - Autoprefixer (https://github.com/postcss/autoprefixer)
     - PostCSS-simple-var (https://github.com/postcss/postcss-simple-vars)
     - PostCSS-partial-import (postcss-partial-import)
-- Unit tests
-    - Karma (https://karma-runner.github.io/1.0/index.html)
-    - Chai (http://chaijs.com/)
-    - Sinon (http://sinonjs.org/)
-    - Coverage (https://karma-runner.github.io/0.8/config/coverage.html)
+- Unit tests/Coverage
+    - Jest (https://facebook.github.io/jest/)
     - and React/Redux modules for unit testing
 
 ### Project Structure
