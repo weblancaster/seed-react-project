@@ -1,0 +1,15 @@
+{
+    "testEnvironment": "node",
+    "testPathDirs": [
+        "./src"
+    ],
+    "testRegex": ".*.test.js",
+    "collectCoverageFrom": [
+        "**/*.js",
+        "!src/index.js",
+        "!src/shared/constants.js",
+        "!src/shared/index.reducer.js",
+        "!src/shared/index.store.js",
+        "!**/node_modules/**"
+    ]
+}

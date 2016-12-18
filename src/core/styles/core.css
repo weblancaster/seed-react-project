@@ -1,7 +1,5 @@
 $baseBackground: #eee;
 
-@import "base.css";
-
 .container {
     background: $baseBackground;
     display: flex;
