@@ -4,6 +4,7 @@ import {
 const initialState = {
     counter: 0
 };
+
 export default function feat1(state = initialState, action) {
     switch (action.type) {
         case CHANGE_COUNTER:
