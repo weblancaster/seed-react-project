@@ -1,6 +1,7 @@
 import {
     CHANGE_COUNTER
 } from '../shared/constants';
+
 const initialState = {
     counter: 0
 };
