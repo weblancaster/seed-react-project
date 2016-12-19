@@ -53,9 +53,6 @@ After building/architecting a couple of React/Redux applications I have found th
         | index.store.js
         | constants.js
         | utils.js
-        | styles
-            | base.css
-            | grid.css
     | featureBla
         | featureBla.actions.js
         | featureBla.container.jsx
@@ -68,5 +65,8 @@ After building/architecting a couple of React/Redux applications I have found th
         | core.css
         | main.component.jsx
         | notFound.component.jsx
+        | styles
+            | base.css
+            | grid.css
 |
 ```
