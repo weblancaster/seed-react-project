@@ -44,7 +44,6 @@ Redux docs example of folder structure, it's good for todo examples but not for 
 
 After building/architecting a couple of React/Redux applications I have found that the structure defined in this repo is the most productive and scalable so far. But as everything there is always space for improvements so please let me know your ideas. **(SUGGESTED PATTERN)**
 ```
-| loadtests.js
 | src
     | index.html
     | index.js (root route file)
