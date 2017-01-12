@@ -1,3 +1,5 @@
+import { btn } from './feat1.styles.css';
+// can also be. import styles from './feat1.styles.css'; and used as styles.btn
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {
@@ -16,7 +18,7 @@ class Feat1 extends Component {
         return (
             <div>
                 <p>the counter is: <strong>{counter}</strong></p>
-                <button onClick={() => this.counterTrigger()}>trigger counter</button>
+                <button className={btn} onClick={() => this.counterTrigger()}>trigger counter</button>
             </div>
         )
     }
