@@ -73,7 +73,6 @@
     "dependencies": {
         "lodash": "^4.15.0",
         "normalize.css": "^5.0.0",
-        "rc-switch": "^1.4.2",
         "react": "^15.0.0",
         "react-dom": "^15.0.0",
         "react-redux": "^4.4.5",
