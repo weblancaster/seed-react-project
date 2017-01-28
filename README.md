@@ -14,7 +14,7 @@ Yet another React boilerplate to rapidly and easily start a React stack project 
 - Webpack (https://github.com/webpack/webpack)
     - Webpack dashboard (https://github.com/FormidableLabs/webpack-dashboard)
     - CSS modules (https://github.com/css-modules/css-modules)
-- PostCSS (https://github.com/postcss/postcss)
+- PostCSS or good ol SASS (https://github.com/postcss/postcss)
     - Autoprefixer (https://github.com/postcss/autoprefixer)
     - PostCSS-simple-var (https://github.com/postcss/postcss-simple-vars)
     - PostCSS-partial-import (postcss-partial-import)
