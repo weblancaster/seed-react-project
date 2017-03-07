@@ -10,6 +10,7 @@ let defaultSettings = require('./defaults');
 
 let config = Object.assign({}, baseConfig, {
     entry: [
+        'react-hot-loader/patch',
         'webpack-dev-server/client?http://127.0.0.1:' + defaultSettings.port,
         'webpack/hot/only-dev-server',
         './src/index'
@@ -21,7 +22,8 @@ let config = Object.assign({}, baseConfig, {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': '"development"'
-        })
+        }),
+        new webpack.NamedModulesPlugin()
     ]
 });
 
@@ -29,10 +31,10 @@ let config = Object.assign({}, baseConfig, {
 config.module.rules.push(
     {
         test: /\.(js|jsx)$/,
+        exclude: [/node_modules/],
         use: [
-            'react-hot-loader',
             'babel-loader'
-        ],
+        ]
         // include: [].concat(config.additionalPaths, [path.join(__dirname, '/../src')])
     }
 );
