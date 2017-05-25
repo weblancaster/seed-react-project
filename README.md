@@ -1,5 +1,7 @@
 # Seed React project
 
+> At the moment this repository is deprecated, although you can still use as reference the architecture and some parts of the code. I advocate to start using [React Create App](https://github.com/facebookincubator/create-react-app). Thanks!
+
 Yet another React boilerplate to rapidly and easily start a React stack project from scratch without the tedious configuration work.
 
 ### Main Modules/Feats
