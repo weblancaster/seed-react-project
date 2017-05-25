@@ -21,17 +21,19 @@ let config = Object.assign({}, baseConfig, {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': '"development"'
-        }),
-        new webpack.NoErrorsPlugin()
+        })
     ]
 });
 
 // Add needed loaders to the defaults here
-config.module.loaders.push(
+config.module.rules.push(
     {
         test: /\.(js|jsx)$/,
-        loader: 'react-hot!babel-loader',
-        include: [].concat(config.additionalPaths, [path.join(__dirname, '/../src')])
+        use: [
+            'react-hot-loader',
+            'babel-loader'
+        ],
+        // include: [].concat(config.additionalPaths, [path.join(__dirname, '/../src')])
     }
 );
 
